@@ -1,1 +1,72 @@
-Place Holder for LarmorTechniques Portal
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>Larmor Precession Techniques Portal | Home</title>
+	</head>
+	<body>
+		<script>
+			/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+			function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(e) {
+				if (!e.target.matches('.dropbtn')) {
+					var myDropdown = document.getElementById("myDropdown");
+					if (myDropdown.classList.contains('show')) {
+						myDropdown.classList.remove('show');
+					}
+				}
+			}
+			function resizeIframe(obj) {
+				obj.style.height = 0;
+				obj.style.height = parseInt(obj.contentWindow.document.body.scrollHeight) + 'px';
+			}
+		</script>
+
+
+		<header>
+			<p>Larmor Precession Techniques Portal</p>
+		</header>
+		<div class="container">
+			<a href="home.html" target="mainframe">Home</a>
+			<div class="dropdown">
+			    <button class="dropbtn" onclick="myFunction()">Techniques</button>
+			    <div class="dropdown-content" id="myDropdown">
+			      <a href="#">Neutron Spin Echo (NSE)</a>
+			      <a href="#">Neutron Resonance Spin Echo (NRSE)</a>
+			      <a href="#">Longitudinal Neutron Resonance Spin Echo (LNRSE)</a>
+			      <a href="#">Larmor Diffraction</a>
+			      <a href="#">Modulated Intensity with zero-effort (MIEZE)</a>
+			      <a href="#">Spin Echo Small Angle Neutron Scattering (SESANS)</a>
+			      <a href="#">Spin Echo Modulated SANS (SEMSANS)</a>
+
+			    </div>
+			</div> 
+			<a href="about.html" target="mainframe">About</a>
+			<a href="contact.html" target="mainframe">Contact</a> 
+			<a href="mailing.html" target="mainframe">Mailing List</a> 
+		</div>
+		<div id="iframe-div">
+			<iframe name="mainframe" src="home.html" frameborder="0"></iframe>
+		</div>
+		<div id="news-div">
+			<iframe id="newsiframe" name="newsframe" src="news.html" frameborder="0"></iframe>
+		</div>
+		<footer>
+			<ul>
+				<li><a href="home.html" target="mainframe"> Home</a></li>
+				<li><a href="about.html" target="mainframe"> About</a></li>
+				<li><a href="contact.html" target="mainframe"> Contact</a></li>
+				<li><a href="mailing.html" target="mainframe"> Mailing List</a></li>
+			</ul>
+			<div class="clear"></div>
+		</footer>
+
+	</body>
+
+</html> 
+
